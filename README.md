@@ -31,4 +31,35 @@ Currently, we will be doing this manually using [This Tutorial](https://github.c
 
 ## Configure the Raspberry Pi to send messages to the IoT Hub
 
-Copy [this](https://github.com/khilscher/IoTHubPiHackathon/blob/master/SenseHat_IoTHub_Http_Lab_Key.py) python code into a new text file, and save it as `SenseHat_IoTHub_Http_Lab_Key.py`.
+Copy [this](https://github.com/khilscher/IoTHubPiHackathon/blob/master/SenseHat_IoTHub_Http_Lab_Key.py) python code into a new text file, and save it as `SenseHat_IoTHub_Http_Lab_Key.py`. Next, move this file from your desktop to the Raspberry Pi (for example, in the Documents). You can do this simply if you set up the ssh or virtual desktop, as you can copy-paste or drag and drop the file over to the location.
+
+## Create an IoT Hub and Device
+
+- Navigate to the Azure Portal, and in the search bar, search for Hub. Click on the service 'IoT Hub'. Then, click the + in the corner to create a new one. I suggest using East US, and the free or S1 subscriptions provided in the free service. 
+
+- Click on your newly created portal, and in the scrollbar on the left, find the 'Shared Access Policies' section under the settings. Click on this, then click on the bar that says iothubowner, and a bar should appear on the right. Find the 'connection key- primary string' and copy and save it somewhere (such as a text file). 
+
+- Next, in the left bar, scroll down and find the IoT Edge bar, then add a new device
+
+## Connect the Pi to the IoT Hub 
+
+On the Raspberry Pi and type in the command line:
+```sh
+cd Desktop
+sudo nano SenseHat_IoTHub_Http_Lab_Key.py
+```
+- Scroll down and find the line that says "Connection string = " and paste in the Connection Key you previously saved. (Azure Portal -> IoT Hub -> Shared access policies -> iothubowner -> Connection string-primary key)
+- Just under that, set "deviceID = " to the name you previously created
+
+## Test sending messages
+
+Try running the python script by typing the following:
+```sh
+python SenseHat_IoTHub_Http_Lab_Key.py
+```
+
+From the hub, click on the device name. From here, navigate to the 'Message to Device' tab. In the message body tab, type a message (Hello World!), then in the top left, click send message. 
+
+## Clean Up
+
+Delete the resource group
