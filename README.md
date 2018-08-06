@@ -69,6 +69,8 @@ python SenseHat_IoTHub_Http_Lab_Key.py
 
 From the hub, click on the device name. From here, navigate to the 'Message to Device' tab. In the message body tab, type a message (IE: Hello World!), then in the top left, click send message. 
 
+If succesful, the Sense Hat should display the message. As well, the command line interface should also display the message. This refreshes every 5 seconds, so there might be a small delay.
+
 ## Clean Up the Pi
 
 To stop the python script, press Ctrl+C
