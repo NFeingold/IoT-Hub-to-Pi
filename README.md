@@ -54,7 +54,7 @@ On the Raspberry Pi and type in the command line:
 cd Desktop
 sudo nano SenseHat_IoTHub_Http_Lab_Key.py
 ```
-- Scroll down and find the line that says "Connection string = " and paste in the Connection Key you saved. (Azure Portal -> IoT Hub -> Shared access policies -> iothubowner -> Connection string-primary key)
+- Scroll down and find the line that says "Connection string = " and paste in the Connection Key you saved. <br/> (Azure Portal -> IoT Hub -> Shared access policies -> iothubowner -> Connection string-primary key)
 - Just under that, set "deviceID = " to the name you created
 
 From here, press Ctrl+X, Y, Enter (Exit, Yes (Save), Exit)
