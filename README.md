@@ -28,7 +28,7 @@ Follow [this tutorial](https://blog.jongallant.com/2017/11/raspberrypi-setup/) o
 
 ## Install Azure IoT Edge on the Pi
 
-I will be following [this tutorial](https://docs.microsoft.com/en-us/azure/iot-edge/how-to-install-iot-edge-linux-arm) on setting up the Pi with IoT Edge. Feel free to follow their tutorial for more detail.
+I will be following [this tutorial](https://docs.microsoft.com/en-us/azure/iot-edge/how-to-install-iot-edge-linux-arm) on setting up the Pi with IoT Edge. Feel free to follow their tutorial for more detail. If you do, [skip to installing a deployment](https://github.com/NFeingold/IoT-Hub-to-Pi/blob/master/README.md#install-a-deployment)
 
 - Install the container runtime: 
 ```sh
