@@ -28,7 +28,42 @@ Follow [this tutorial](https://blog.jongallant.com/2017/11/raspberrypi-setup/) o
 
 ## Install Azure IoT Edge on the Pi
 
-Follow [this tutorial](https://docs.microsoft.com/en-us/azure/iot-edge/how-to-install-iot-edge-linux-arm) on setting up the Pi with IoT Edge
+I will be following [this tutorial](https://docs.microsoft.com/en-us/azure/iot-edge/how-to-install-iot-edge-linux-arm) on setting up the Pi with IoT Edge. Feel free to follow their tutorial for more detail.
+
+- Install the container runtime: 
+```sh
+# Download and install the moby-engine
+curl -L https://aka.ms/moby-engine-armhf-latest -o moby_engine.deb && sudo dpkg -i ./moby_engine.deb
+
+# Download and install the moby-cli
+curl -L https://aka.ms/moby-cli-armhf-latest -o moby_cli.deb && sudo dpkg -i ./moby_cli.deb
+
+# Run apt-get fix
+sudo apt-get install -f
+```
+- Install the Secuirity Daemon 
+```sh
+# Download and install the standard libiothsm implementation
+curl -L https://aka.ms/libiothsm-std-linux-armhf-latest -o libiothsm-std.deb && sudo dpkg -i ./libiothsm-std.deb
+
+# Download and install the IoT Edge Security Daemon
+curl -L https://aka.ms/iotedged-linux-armhf-latest -o iotedge.deb && sudo dpkg -i ./iotedge.deb
+
+# Run apt-get fix
+sudo apt-get install -f
+```
+Configure the Daemon 
+```sh
+sudo nano /etc/iotedge/config.yaml
+```
+
+- Update the value of device_connection_string with the connection string from your IoT Edge device.
+To exit, press Ctrl+X, Y, Enter
+
+- Restart the Daemon
+```sh
+sudo systemctl restart iotedge
+```
 
 ## Install a deployment 
 
