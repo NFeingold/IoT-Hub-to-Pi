@@ -57,6 +57,8 @@ sudo nano SenseHat_IoTHub_Http_Lab_Key.py
 - Scroll down and find the line that says "Connection string = " and paste in the Connection Key you saved. (Azure Portal -> IoT Hub -> Shared access policies -> iothubowner -> Connection string-primary key)
 - Just under that, set "deviceID = " to the name you created
 
+From here, press Ctrl+X, Y, Enter (Exit, Yes (Save), Exit)
+
 ## Test sending messages
 
 Try running the python script by typing the following:
@@ -67,6 +69,23 @@ python SenseHat_IoTHub_Http_Lab_Key.py
 
 From the hub, click on the device name. From here, navigate to the 'Message to Device' tab. In the message body tab, type a message (IE: Hello World!), then in the top left, click send message. 
 
-## Clean Up
+## Clean Up the Pi
 
-Delete the resource group
+To stop the python script, press Ctrl+C
+
+I reccomend keeping all the local files, so you can reuse them in the future. They take up very little storage. However, if you want to delete them, all you have to do is navigate to the folder where you saved the python script and delete it. 
+
+To remove IoT Edge runtime:
+```sh
+sudo apt-get remove --purge iotedge
+sudo docker ps -a
+sudo docker rm -f edgeHub
+sudo docker rm -f edgeAgent
+sudo apt-get remove --purge moby
+```
+
+*Note: I have not yet tested removing anything-- this is just the documentation I found [here](https://docs.microsoft.com/en-us/azure/iot-edge/quickstart-linux#clean-up-resources)*
+
+## Clean up Azure
+
+Delete the resource group that the Hub was built in. This can be done by navigating to the resource group folder, then clicking on the resource group, then clicking delete at the top. 
