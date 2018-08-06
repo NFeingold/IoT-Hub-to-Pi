@@ -37,7 +37,7 @@ Currently, we will be doing this manually using [this tutorial](https://github.c
 
 ## Configure the Raspberry Pi to send messages to the IoT Hub
 
-Copy [this](https://github.com/khilscher/IoTHubPiHackathon/blob/master/SenseHat_IoTHub_Http_Lab_Key.py) python code into a new text file, and save it as `SenseHat_IoTHub_Http_Lab_Key.py`. Next, move this file from your desktop to the Raspberry Pi (for example, in Documents). You can do this simply if you set up the ssh or virtual desktop, as you can copy-paste or drag and drop the file over to the location.
+- Copy [this](https://github.com/khilscher/IoTHubPiHackathon/blob/master/SenseHat_IoTHub_Http_Lab_Key.py) python code into a new text file, and save it as `SenseHat_IoTHub_Http_Lab_Key.py`. Next, move this file from your desktop to the Raspberry Pi (for example, in Documents). You can do this simply if you set up the ssh or virtual desktop, as you can copy-paste or drag and drop the file over to the location.
 
 ## Create an IoT Hub and Device
 
@@ -67,17 +67,17 @@ python SenseHat_IoTHub_Http_Lab_Key.py
 ```
 *Note: You must be in the correct directory to run a file! Use cd to navigate to the correct folder* <br/>
 
-From the hub, click on the device name. From here, navigate to the 'Message to Device' tab. In the message body tab, type a message (IE: Hello World!), then in the top left, click send message. 
+- From the hub, click on the device name. From here, navigate to the 'Message to Device' tab. In the message body tab, type a message (IE: Hello World!), then in the top left, click send message. 
 
 If succesful, the Sense Hat should display the message. As well, the command line interface should also display the message. This refreshes every 5 seconds, so there might be a small delay.
 
 ## Clean Up the Pi
 
-To stop the python script, press Ctrl+C
+- To stop the python script, press Ctrl+C
 
 I reccomend keeping all the local files, so you can reuse them in the future. They take up very little storage. However, if you want to delete them, all you have to do is navigate to the folder where you saved the python script and delete it. 
 
-To remove IoT Edge runtime:
+- To remove IoT Edge runtime:
 ```sh
 sudo apt-get remove --purge iotedge
 sudo docker ps -a
@@ -90,4 +90,4 @@ sudo apt-get remove --purge moby
 
 ## Clean up Azure
 
-Delete the resource group that the Hub was built in. This can be done by navigating to the resource group folder, then clicking on the resource group, then clicking delete at the top. 
+- Delete the resource group that the Hub was built in. <br/> This can be done by navigating to the resource group folder, then clicking on the resource group, then clicking delete at the top. 
