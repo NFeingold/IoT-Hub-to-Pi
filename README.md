@@ -52,7 +52,7 @@ curl -L https://aka.ms/iotedged-linux-armhf-latest -o iotedge.deb && sudo dpkg -
 # Run apt-get fix
 sudo apt-get install -f
 ```
-Configure the Daemon 
+- Configure the Daemon 
 ```sh
 sudo nano /etc/iotedge/config.yaml
 ```
