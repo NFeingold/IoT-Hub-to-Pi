@@ -57,7 +57,7 @@ sudo apt-get install -f
 sudo nano /etc/iotedge/config.yaml
 ```
 
-- Update the value of device_connection_string with the connection string from your IoT Edge device.
+Update the value of device_connection_string with the connection string from your IoT Edge device.
 To exit, press Ctrl+X, Y, Enter
 
 - Restart the Daemon
