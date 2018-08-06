@@ -4,8 +4,6 @@ This is a short, base level description of how to connect a Raspberry Pi to Azur
 
 ## Prerequisites
 
-Normally, I don't like having prerequisites in my tutorials, but there is hardware you will need, which comes with very well flushed out tutorials that I would do nothing differently. So, you will need:
-
 - [Azure Subscription](https://portal.azure.com) 
 - [Raspberry Pi](https://www.raspberrypi.org/products/raspberry-pi-3-model-b/)
 - Power Cable (5v micro USB- This will likely come with the Pi)
