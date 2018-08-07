@@ -20,7 +20,8 @@ The following you will only need temporarily, while setting up the Pi:
 - USB Wired Mouse (Maybe optional)
 
 
-*Note:* You will need to be able to connect the Raspberry Pi to the internet. It has an ethernet port onboard, and some (such as the Raspberry Pi 3) have a wireless chip.
+You will need to be able to connect the Raspberry Pi to the internet. It has an ethernet port onboard, and some (such as the Raspberry Pi 3) have a wireless chip. <br/>
+As well, there are tutorials on how to set up a Raspberry Pi without peripherals (Headless). [Here](https://hackernoon.com/raspberry-pi-headless-install-462ccabd75d0) is an example. I have not personally tested this, as I had peripherals available to me.
 
 
 ## Set up the Raspberry Pi
