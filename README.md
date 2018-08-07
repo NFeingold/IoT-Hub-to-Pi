@@ -80,9 +80,9 @@ sudo systemctl restart iotedge
 ```
 If succesfull, when you navigate to the IoT Hub Edge Devices and click on your device, it should say 'connected' near the bottom
 
-## Install a deployment 
+## Install an Application
 
-Kind of... I'm working on it <br/>
+Kind of... I'm working on it. This application is just a python script to read messages and telemetry. It is not containerized. <br/>
 Currently, we will be doing this manually using [this tutorial](https://github.com/khilscher/IoTHubPiHackathon/tree/master/3) that I will be translating into this document. You do __not__ need to follow that link, it is just there to give credit where it is due.
 
 ### Configure the Raspberry Pi to send messages to the IoT Hub
