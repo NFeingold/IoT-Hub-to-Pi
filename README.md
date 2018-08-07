@@ -76,11 +76,11 @@ If succesfull, when you navigate to the IoT Hub Edge Devices and click on your d
 Kind of... I'm working on it <br/>
 Currently, we will be doing this manually using [this tutorial](https://github.com/khilscher/IoTHubPiHackathon/tree/master/3) that I will be translating into this document. You do __not__ need to follow that link, it is just there to give credit where it is due.
 
-## Configure the Raspberry Pi to send messages to the IoT Hub
+### Configure the Raspberry Pi to send messages to the IoT Hub
 
 - Copy [this](https://github.com/khilscher/IoTHubPiHackathon/blob/master/SenseHat_IoTHub_Http_Lab_Key.py) python code into a new text file, and save it as `SenseHat_IoTHub_Http_Lab_Key.py`. Next, move this file from your desktop to the Raspberry Pi (for example, in Documents). You can do this simply if you set up the ssh or virtual desktop, as you can copy-paste or drag and drop the file over to the location.
 
-## Create an IoT Hub and Device
+### Create an IoT Hub and Device
 
 - Navigate to the Azure Portal, and in the search bar, search for Hub. Click on the service 'IoT Hub'. Then, click the + in the corner to create a new IoT Hub. I suggest using East US, and the free or S1 subscriptions provided in the free service. 
 
@@ -88,7 +88,7 @@ Currently, we will be doing this manually using [this tutorial](https://github.c
 
 - In the left navigation bar, scroll down and go to IoT Edge, then Add IoT Edge Device. All you have to do is name it.
 
-## Connect the Pi to the IoT Hub 
+### Connect the Pi to the IoT Hub 
 
 On the Raspberry Pi and type in the command line:
 ```sh
@@ -101,7 +101,7 @@ sudo nano SenseHat_IoTHub_Http_Lab_Key.py
 
 From here, press Ctrl+X, Y, Enter (Exit, Yes (Save), Exit)
 
-## Test sending messages
+### Test sending messages
 
 Try running the python script by typing the following:
 ```sh
