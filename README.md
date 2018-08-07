@@ -69,7 +69,7 @@ sudo nano /etc/iotedge/config.yaml
 ```
 
 Update the value of device_connection_string with the connection string from your IoT Edge device.
-(IoT Hub -> IoT Edge -> Device Details -> Connection String Primary Key)
+(IoT Hub -> IoT Edge -> Device Details -> Connection String Primary Key)<br/>
 **Note: This is the __Device Connection String,__ NOT the IoT Hub Connection String**
 
 To exit, press Ctrl+X, Y, Enter
@@ -96,7 +96,7 @@ On the Raspberry Pi and type in the command line:
 cd Desktop
 sudo nano SenseHat_IoTHub_Http_Lab_Key.py
 ```
-- Scroll down and find the line that says "Connection string = " and paste in the Connection Key you saved. <br/> (Azure Portal -> IoT Hub -> Shared access policies -> iothubowner -> Connection string-primary key)
+- Scroll down and find the line that says "Connection string = " and paste in the Connection Key you saved. <br/> (Azure Portal -> IoT Hub -> Shared access policies -> iothubowner -> Connection string-primary key)<br/>
 **Note: This is the __IoT Hub Connection String,__ NOT the device connection string,**<br/>
 - Just under that, set "deviceID = " to the name you created
 
