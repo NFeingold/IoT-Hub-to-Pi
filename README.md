@@ -2,6 +2,8 @@
 
 This is a short, base level description of how to connect a Raspberry Pi to Azure IoT Edge. This is mostly an amalgamation of other peoples tutorials- however once I have a full process flushed out, I will add more of my own notes, and configure as much as I can through the Azure Portal.
 
+**NOTE:** If you stumble upon this, I have not finished documenting and testing all this-- it is just what I *think.* I am by no means an expert
+
 ## Prerequisites
 
 - [Azure Subscription](https://portal.azure.com) 
