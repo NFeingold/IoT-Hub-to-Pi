@@ -27,7 +27,16 @@ As well, there are tutorials on how to set up a Raspberry Pi without peripherals
 ## Set up the Raspberry Pi
 
 Follow [this tutorial](https://blog.jongallant.com/2017/11/raspberrypi-setup/) on setting up a raspberry pi. It is a somewhat lengthy process, however you only ever have to do it once. It teaches you how to install the operating system, prepare things for this example, set up SSH, and a remote desktop which are __extremely helpful__. It is succinct and the best tutorial I have found. It suggests numerous peripherals, however, many are unnecessary. You only need what I previously mentioned.
+## Create an IoT Hub and Device
 
+- Navigate to the Azure Portal, and in the search bar, search for Hub. Click on the service 'IoT Hub'. Then, click the + in the corner to create a new IoT Hub. I suggest using East US, and the free or S1 subscriptions provided in the free service. 
+
+- Click on your newly created portal, and in the scrollbar on the left, find the 'Shared Access Policies' section under the settings. Click on the bar that says iothubowner, and a window should appear on the right. Find the 'connection key- primary string' and copy and store it somewhere (such as a text file). 
+
+- In the left navigation bar, scroll down and go to IoT Edge, then Add IoT Edge Device. All you have to do is name it.
+
+- Click on the device id, copy and save the Connection String Primary Key into the same text document
+  - Make sure to specify that this is the device key, not the hub key.
 ## Install Azure IoT Edge on the Pi
 
 I will be following [this tutorial](https://docs.microsoft.com/en-us/azure/iot-edge/how-to-install-iot-edge-linux-arm) on setting up the Pi with IoT Edge. Feel free to follow their tutorial for more detail. If you do, [skip to installing a deployment](https://github.com/NFeingold/IoT-Hub-to-Pi/blob/master/README.md#install-a-deployment)
@@ -79,14 +88,6 @@ Currently, we will be doing this manually using [this tutorial](https://github.c
 ### Configure the Raspberry Pi to send messages to the IoT Hub
 
 - Copy [this](https://github.com/khilscher/IoTHubPiHackathon/blob/master/SenseHat_IoTHub_Http_Lab_Key.py) python code into a new text file, and save it as `SenseHat_IoTHub_Http_Lab_Key.py`. Next, move this file from your desktop to the Raspberry Pi (for example, in Documents). You can do this simply if you set up the ssh or virtual desktop, as you can copy-paste or drag and drop the file over to the location.
-
-### Create an IoT Hub and Device
-
-- Navigate to the Azure Portal, and in the search bar, search for Hub. Click on the service 'IoT Hub'. Then, click the + in the corner to create a new IoT Hub. I suggest using East US, and the free or S1 subscriptions provided in the free service. 
-
-- Click on your newly created portal, and in the scrollbar on the left, find the 'Shared Access Policies' section under the settings. Click on the bar that says iothubowner, and a window should appear on the right. Find the 'connection key- primary string' and copy and store it somewhere (such as a text file). 
-
-- In the left navigation bar, scroll down and go to IoT Edge, then Add IoT Edge Device. All you have to do is name it.
 
 ### Connect the Pi to the IoT Hub 
 
