@@ -10,7 +10,9 @@ This is a short, base level description of how to connect a Raspberry Pi to Azur
 - [Raspberry Pi](https://www.raspberrypi.org/products/raspberry-pi-3-model-b/)
   - Power Cable (5v micro USB- This will likely come with the Pi)
   - 16+ GB MicroSD Card (And a computer to flash [Raspbian](https://www.raspberrypi.org/downloads/raspbian/))
-  - [SenseHat](https://www.raspberrypi.org/products/sense-hat/) <br/> <br/>
+  - [SenseHat](https://www.raspberrypi.org/products/sense-hat/)
+  
+<br/> <br/>
 The following you will only need temporarily, while setting up the Pi:
 
 - USB Wired Keyboard
